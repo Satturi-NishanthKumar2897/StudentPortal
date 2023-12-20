@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery_functions.js"></script>
+	<link rel="stylesheet" href="style.css" media="all">
+</head>
+
+<body>
+	<div id="table-container">
+		
+		<table id="outertable" style="width:45%" class="table-margin table-margin2">
+			<tr>
+				<th class="first-background borderradius">
+					<table id="menu_1">
+						<tr>
+							<td>Student id<input type="text" id="fees_id_1" ></input></td>
+						</tr>
+						<tr>
+							<td>Receipt No<input type = "text" id="rec_no_1" ></input></td>
+						</tr>
+						<tr>
+							<td>Late fees<input type = "number" id="late_fee_1"></input></td>
+						</tr>
+						<tr>
+							<td><button type="button" class="btn btn-info" onclick="fees_1(this)">Check</button></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td class="table-border"><img src="image.png" width="80" height="70"></td>
+
+							<td class="table-border">
+								<div style="margin-left:5px">
+									<font size="5" color="brown"> ROSARY CONVENT HIGH SCHOOL </font> <br>
+									<div>
+										<font size="2">A unit of the Institute of the Franciscan Sisters of Mary <br>
+											Gunfoundry, Abids, Hyderabad - 500001, Telangana State <br>
+											Phone : 23230704 <br><br></font>
+									</div>
+									<u style="margin-bottom:2px">FEE RECEIPT</u>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</th>
+			</tr>
+
+			<tr>
+
+				<td class="borderradius" style="padding:7px"><!--2nd-->
+					<div style="display:flex" ;>
+						<div style="flex-basis:280px"> Receipt No : <span id="rec_1"></span> </div>
+						<div> Date: <span id="dat_1"></span> </div>
+					</div>
+					<p> Admn No : <span id="admn_1"></span> </p>
+					<p> Student's Name : <span id="stu_1"></span> </p>
+					<p> Father's Name: <span id="fat_1"></span> </p>
+					<p style="margin-bottom:0px"> Class & Sec : <span id="sec_1"></span> </p>
+
+
+				</td>
+			</tr>
+
+			<tr style="height:200px">
+				<td colspan="3">
+					<!--<table id="innertable">-->
+					<table style="border-collapse:collapse">
+						<tr style="height:20px">
+							<td>S.NO</td>
+							<td>PARTICULARS</td>
+							<td>AMOUNT</td>
+						</tr>
+						<tr style="height:100px">
+							<td style="width:70px;vertical-align:top;" class="table-border">1.<br>2.</td>
+							<td style="width:1000px;vertical-align:top;" class="table-border">Tution Fee<br>Late Fee
+							</td>
+							<td style="width:400px;vertical-align:top;" class="table-border">
+								<span id="tut_1"></span><br><span id="lat_1"></span></td>
+						</tr>
+						<tr style="height:40px">
+							<td colspan="3">Remarks:<span>July</span><br>Received Amount:<span id="rev_1"></span></td>
+						</tr>
+						<tr style="height:10px">
+							<td></td>
+							<td>
+								<div style="padding-left:82%">Total</div>
+							</td>
+							<td><span id="tot_1"></span></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr style="height:70px">
+				<td class="first-background"><!--4th-->
+					<p>In Words: <span style="text-transform:Capitalize" id="num_1"></span> </p>
+					<p>Note: Fee once paid is not refundable</p>
+					<div style="text-align:right;">
+						<span style="padding-right:28px">Signature</span>
+					</div>
+
+				</td>
+			</tr>
+
+		</table>
+
+		<!-------------------------------------------------------------------------------->
+		<table id="outertable" style="width:45%" class="table-margin table-margin2">
+			<tr>
+				
+				<th class="first-background borderradius">
+					<table id="menu_2">
+						<tr>
+							<td>Student id<input type="text" id="fees_id_2" ></input></td>
+						</tr>
+						<tr>
+							<td>Receipt No<input type = "text" id="rec_no_2" ></input></td>
+						</tr>
+						<tr>
+							<td>Late fees<input type = "number" id="late_fee_2"></input></td>
+						</tr>
+						<tr>
+							<td><button type="button" class="btn btn-info" onclick="fees_2(this)">Check</button></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td class="table-border"><img src="image.png" width="80" height="70"></td>
+
+							<td class="table-border">
+								<div style="margin-left:5px">
+									<font size="5" color="brown"> ROSARY CONVENT HIGH SCHOOL </font> <br>
+									<div>
+										<font size="2">A unit of the Institute of the Franciscan Sisters of Mary <br>
+											Gunfoundry, Abids, Hyderabad - 500001, Telangana State <br>
+											Phone : 23230704 <br><br></font>
+									</div>
+									<u style="margin-bottom:2px">FEE RECEIPT</u>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</th>
+			</tr>
+
+			<tr>
+
+				<td class="borderradius" style="padding:7px"><!--2nd-->
+
+					<div style="display:flex;">
+						<div style="flex-basis:280px"> Receipt No : <span id="rec_2"></span> </div>
+						<div> Date: <span id="dat_2"></span> </div>
+					</div>
+					<p> Admn No : <span id="admn_2"></span> </p>
+					<p> Student's Name : <span id="stu_2"></span> </p>
+					<p> Father's Name: <span id="fat_2"></span> </p>
+					<p style="margin-bottom:0px"> Class & Sec : <span id="sec_2"></span> </p>
+
+
+				</td>
+
+			</tr>
+
+			<tr style="height:200px">
+				<td colspan="3">
+					<table id="innertable" style="border-collapse:collapse">
+						<tr style="height:20px">
+							<td>S.NO</td>
+							<td>PARTICULARS</td>
+							<td>AMOUNT</td>
+						</tr>
+						<tr style="height:100px" ;>
+							<td style="width:70px;vertical-align:top;" class="table-border">1.<br>2.</td>
+							<td style="width:1000px;vertical-align:top;" class="table-border">Tution Fee<br>Late Fee
+							</td>
+							<td style="width:400px;vertical-align:top;" class="table-border">
+								<span id="tut_2"></span><br><span id="lat_2"></span></td>
+						</tr>
+						<tr style="height:40px">
+							<td colspan="3">Remarks:<span>July</span><br>Received Amount:<span id="rev_2"></span></td>
+						</tr>
+						<trstyle="height:10px">
+							<td></td>
+							<td>
+								<div style="padding-left:82%"></div>
+							</td>
+							<td><span id="tot_2"></span></td>
+			</tr>
+		</table>
+		</td>
+		</tr>
+
+		<tr style="height:70px">
+			<td class="first-background"><!--4th-->
+				<p>In Words: <span style="text-transform:Capitalize" id="num_2"></span> </p>
+				<p>Note: Fee once paid is not refundable</p>
+				<div style="text-align:right;">
+					<span style="padding-right:28px">Signature</span>
+				</div>
+
+			</td>
+		</tr>
+
+		</table>
+		
+	</div>
+	<button id="print_but" onclick="printData(this)">Print Data</button>
+</body>
+
+</html>

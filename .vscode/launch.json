@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-StudentsApplication<students>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.school.students.StudentsApplication",
+            "projectName": "students",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
