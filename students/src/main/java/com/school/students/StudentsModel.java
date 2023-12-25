@@ -44,37 +44,62 @@ public class StudentsModel {
     }
 
 
-    public Fees getFees(int id, String term) {
+    public Fees getFees(int id, Terms term) {
         Map<Integer,List<String>> data = null;
         try {
             data = readJExcel(path);
         } catch (BiffException | IOException e) {
             e.printStackTrace();
         }
-
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");  
         Date date = new Date();  
         String dateValue = formatter.format(date);
         List<String> match = data.get(id);
         System.out.println(match);
-        String fee = "";
-        switch (term) {
-            case "term1":
-                fee = match.get(5);
-                break;
-            case "term2":
-                fee = match.get(6);
-                break;
-            case "term3":
-                fee = match.get(7);
-                break;
-            case "term4":
-                fee = match.get(8);
-                break;
-            default:
-                break;
+        double fee = 0;
+        String remarks = "";
+        if(term.isTerm1()){
+            fee = fee + Double.valueOf(match.get(5));
+            remarks = remarks + "July";
         }
-        Fees fees = new Fees(1234,id,match.get(2),match.get(3),match.get(4),Double.valueOf(fee),dateValue);
+        if(term.isTerm2()){
+            fee = fee + Double.valueOf(match.get(6));
+            if(!remarks.isEmpty()){
+                remarks = remarks + ", ";
+            }
+            remarks = remarks + "September";
+        }
+        if(term.isTerm3()){
+            fee = fee + Double.valueOf(match.get(7));
+            if(!remarks.isEmpty()){
+                remarks = remarks + ", ";
+            }
+            remarks = remarks + "December";
+        }
+        if(term.isTerm4()){
+            fee = fee + Double.valueOf(match.get(8));
+            if(!remarks.isEmpty()){
+                remarks = remarks + ", ";
+            }
+            remarks = remarks + "February";
+        }
+        // switch (term) {
+        //     case "term1":
+        //         fee = match.get(5);
+        //         break;
+        //     case "term2":
+        //         fee = match.get(6);
+        //         break;
+        //     case "term3":
+        //         fee = match.get(7);
+        //         break;
+        //     case "term4":
+        //         fee = match.get(8);
+        //         break;
+        //     default:
+        //         break;
+        // }
+        Fees fees = new Fees(1234,id,match.get(2),match.get(3),match.get(4),fee,dateValue,term,remarks);
         return fees;
     }
     

@@ -9,10 +9,11 @@ public class Fees {
     double fee;
     
     String date;
-
+    String remarks;
+    Terms term;
     public Fees(){}
     
-    public Fees(int receipt_no, int admn_no, String student_name, String father_name, String standard, double fee,String date) {
+    public Fees(int receipt_no, int admn_no, String student_name, String father_name, String standard, double fee,String date,Terms term,String remarks) {
         this.receipt_no = receipt_no;
         this.admn_no = admn_no;
         this.student_name = student_name;
@@ -20,6 +21,8 @@ public class Fees {
         this.standard = standard;
         this.fee = fee;
         this.date = date;
+        this.term= new Terms(term);
+        this.remarks = remarks;
     }
     public int getReceipt_no() {
         return receipt_no;
@@ -64,5 +67,22 @@ public class Fees {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public Terms getTerm() {
+        return term;
+    }
+
+    public void setTerm(Terms term) {
+        this.term = new Terms(term);
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+ 
     
 }

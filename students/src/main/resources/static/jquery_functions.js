@@ -8,10 +8,22 @@ function fees_1(){
     var rec_no = document.getElementById("rec_no_1").value;
     var late_fee = document.getElementById("late_fee_1").value;
     // var table = document.getElementById("table_1");
+    var term_1 = document.getElementById("Term11").checked;
+    var term_2 = document.getElementById("Term21").checked;
+    var term_3 = document.getElementById("Term31").checked;
+    var term_4 = document.getElementById("Term41").checked;
+
     var url = "/fees/" + fees_id ;
 
-    xhr.open("GET", url, true);
+    var body = {
+        "term1" : term_1,
+        "term2" : term_2,
+        "term3" : term_3,
+        "term4" : term_4
+    };
 
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     // let resposne = document.getElementById("response");
 
 
@@ -34,6 +46,7 @@ function fees_1(){
             document.getElementById('tut_1').innerHTML = obj.fee;
             document.getElementById('rev_1').innerHTML = total_fee;
             document.getElementById('num_1').innerHTML = inWords(total_fee);
+            document.getElementById('rem_1').innerHTML = obj.remarks;
             // resposne.innerHTML = str;
 
         } 
@@ -42,7 +55,7 @@ function fees_1(){
         }
     }
 
-    xhr.send();
+    xhr.send(JSON.stringify(body));
 }
 
 function fees_2(){
@@ -55,9 +68,22 @@ function fees_2(){
     // var table = document.getElementById("table_2");
     var url = "/fees/" + fees_id ;
 
-    xhr.open("GET", url, true);
+    var term_1 = document.getElementById("Term12").checked;
+    var term_2 = document.getElementById("Term22").checked;
+    var term_3 = document.getElementById("Term32").checked;
+    var term_4 = document.getElementById("Term42").checked;
 
-    // let resposne = document.getElementById("response");
+    var url = "/fees/" + fees_id ;
+
+    var body = {
+        "term1" : term_1,
+        "term2" : term_2,
+        "term3" : term_3,
+        "term4" : term_4
+    };
+
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
 
     xhr.onload = function () {
@@ -79,6 +105,7 @@ function fees_2(){
             document.getElementById('tut_2').innerHTML = obj.fee;
             document.getElementById('rev_2').innerHTML = total_fee;
             document.getElementById('num_2').innerHTML = inWords(total_fee);
+            document.getElementById('rem_2').innerHTML = obj.remarks;
 
             // resposne.innerHTML = str;
 
@@ -88,7 +115,7 @@ function fees_2(){
         }
     }
 
-    xhr.send();
+    xhr.send(JSON.stringify(body));
 }
 
 
