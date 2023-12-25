@@ -6,25 +6,82 @@
 </head>
 
 <body>
+	<div style="display:flex";>
+	
+		<table id="menu_1" style="margin-left:35px;" >
+			<tr>
+				<td class="table-border"><div class="col-25">Student Id</div><div class="col-75"><input type="text" id="fees_id_1" ></input></div></td>
+			</tr>
+			<tr>
+				<td class="table-border"><div class="col-25">Receipt No</div><div class="col-75"><input type = "text" id="rec_no_1"></input></div></td>
+			</tr>
+			<tr>
+				<td class="table-border"><div class="col-25">Late fees</div><div class="col-75"><input type = "number" id="late_fee_1"></input></div></td>
+			</tr>
+			<tr>
+			<td class="table-border">	
+				<form>
+					<label for="Term1">Term1</label>
+					<input type="checkbox" id="Term1" name="Terms" value="July">
+				  
+					<label for="Term2">Term2</label>
+					<input type="checkbox" id="Term2" name="Terms" value="September">
+				  
+					<label for="Term3">Term3</label>
+					<input type="checkbox" id="Term3" name="Terms" value="December">
+	
+					<label for="Term4">Term4</label>
+					<input type="checkbox" id="Term4" name="Terms" value="Feburary">			  
+				</form>
+	
+			</td>
+			</tr>
+	
+			<tr>
+				<td class="table-border"><button type="button" class="btn btn-info" onclick="fees_1(this)">Check</button></td>
+			</tr>
+		</table>
+	
+		<table id="menu_2" style="margin-left:210px;" >
+			<tr>
+				<td class="table-border"><div class="col-25">Student Id</div><div class="col-75"><input type="text" id="fees_id_2" ></input></div></td>
+			</tr>
+			<tr>
+				<td class="table-border"><div class="col-25">Receipt No</div><div class="col-75"><input type = "text" id="rec_no_2"></input></div></td>
+			</tr>
+			<tr>
+				<td class="table-border"><div class="col-25">Late fees</div><div class="col-75"><input type = "number" id="late_fee_2"></input></div></td>
+			</tr>
+			<tr>
+			<td class="table-border">	
+				<form>
+					<label for="Term1">Term1</label>
+					<input type="checkbox" id="Term1" name="Terms" value="July">
+				  
+					<label for="Term2">Term2</label>
+					<input type="checkbox" id="Term2" name="Terms" value="September">
+				  
+					<label for="Term3">Term3</label>
+					<input type="checkbox" id="Term3" name="Terms" value="December">
+	
+					<label for="Term4">Term4</label>
+					<input type="checkbox" id="Term4" name="Terms" value="Feburary">			  
+				</form>
+	
+			</td>
+			</tr>
+	
+			<tr>
+				<td class="table-border"><button type="button" class="btn btn-info" onclick="fees_2(this)">Check</button></td>
+			</tr>
+		</table>
+	</div>
+	
 	<div id="table-container">
 		
 		<table id="outertable" style="width:45%" class="table-margin table-margin2">
 			<tr>
 				<th class="first-background borderradius">
-					<table id="menu_1">
-						<tr>
-							<td>Student id<input type="text" id="fees_id_1" ></input></td>
-						</tr>
-						<tr>
-							<td>Receipt No<input type = "text" id="rec_no_1" ></input></td>
-						</tr>
-						<tr>
-							<td>Late fees<input type = "number" id="late_fee_1"></input></td>
-						</tr>
-						<tr>
-							<td><button type="button" class="btn btn-info" onclick="fees_1(this)">Check</button></td>
-						</tr>
-					</table>
 					<table>
 						<tr>
 							<td class="table-border"><img src="image.png" width="80" height="70"></td>
@@ -109,20 +166,6 @@
 			<tr>
 				
 				<th class="first-background borderradius">
-					<table id="menu_2">
-						<tr>
-							<td>Student id<input type="text" id="fees_id_2" ></input></td>
-						</tr>
-						<tr>
-							<td>Receipt No<input type = "text" id="rec_no_2" ></input></td>
-						</tr>
-						<tr>
-							<td>Late fees<input type = "number" id="late_fee_2"></input></td>
-						</tr>
-						<tr>
-							<td><button type="button" class="btn btn-info" onclick="fees_2(this)">Check</button></td>
-						</tr>
-					</table>
 					<table>
 						<tr>
 							<td class="table-border"><img src="image.png" width="80" height="70"></td>
